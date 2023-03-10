@@ -1,0 +1,59 @@
+.contentBuilderHeader
+{
+height: 50px;
+
+}
+.contentContainer
+{
+    display: flex;
+}
+
+.contentTypes
+{
+    width: 30%;
+    height: 85vh;
+    background-color: #d4d6e5;
+    padding: 50px;
+}
+.captions
+{
+    display: flex;
+    justify-content: space-between;
+}
+.names
+{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+.newItem
+{
+    height: 60px;
+    margin-top: 10px   ;
+    background-color: white;
+    border: 1px dashed #370ed0;
+    color:#370ed0;
+
+}
+.ContentTypesButton
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.items 
+{
+    height: 60px;
+    margin-top: 10px   ;
+    border-radius: 8px; 
+    background-color: white;
+    border:transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button:active{
+    background-color: #5905ce;
+}

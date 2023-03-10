@@ -1,0 +1,30 @@
+.OuterContainer
+{
+        width:25%;
+        height:100vh;
+        background-color: #26262A;
+        /* display: flex; */
+
+}
+.sideHeader
+{
+        background-color: #361c58;
+        height: 10%;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        color: white;
+}
+.sideBodySearch
+{
+        
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: row;
+        color: aliceblue;
+        justify-content: space-between;
+}
+.search
+{
+        margin-top: 20px;
+}

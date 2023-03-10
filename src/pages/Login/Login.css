@@ -1,0 +1,55 @@
+.fullContainer
+{
+    display: flex;
+}
+.loginContainer
+{
+    background-color: #272727;
+    width: 40%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.Heading
+{
+    margin-top: 150px;
+    color: aliceblue;
+    font-weight: bold;
+    /* font-size: 20px; */
+}
+.loginBox
+{
+   display: flex;
+   align-items: center;
+    justify-content: center;
+    color: white;
+}
+.loginBox input
+{
+    width: 300px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px;
+    padding: 10px;
+    display: block;
+}
+.loginBox button
+{
+    width: 320px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    display: block;
+    margin: 10px;
+    /* padding: 10px; */
+    background-color: #8D65F4;
+    color: aliceblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+.links
+{
+    color:aliceblue;
+    text-decoration: none;
+}

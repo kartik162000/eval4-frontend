@@ -1,0 +1,14 @@
+.outerContainer
+{
+    width:60%;
+    height:100vh;
+    background-color: #eceefe;
+    display: flex;
+}
+img
+{
+    width: 50%;
+    height: 50%;
+    transform: translate(300px, 200px);
+    object-fit:cover;
+}

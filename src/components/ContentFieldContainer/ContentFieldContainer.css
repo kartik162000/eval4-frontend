@@ -1,0 +1,88 @@
+.contains
+{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    width: 100%;
+    height: 100vh;
+    background-color: #ebeefe;
+    padding:40px;
+}
+.name h1
+{
+   display: inline-block;
+justify-content: flex-start;
+padding-right: 20px;
+}
+.fieldLength
+{ 
+    color: #67686a;
+    font:19px;
+}
+.addField
+{
+    width:100%;
+    height: 40px;
+    border: 1px dashed #370ed0;
+    color: #370ed0;
+}
+.bodies
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.addField
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.fieldRow
+{
+    width:100%;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.fieldIcon{
+    width: 7%;
+    height: 100%;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    padding-left: 10px;
+}
+.fieldValueContainer
+{
+    display: flex;
+  padding-left: 20px;
+  width: 100%;
+}
+.fieldTitle
+{
+    padding-right: 20px;
+}
+.fieldType
+{
+    padding-left: 180px;
+}
+.icons
+{
+  width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}

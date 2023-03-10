@@ -1,9 +1,10 @@
-import axios from "axios";
+/* eslint-disable consistent-return */
+import axios from 'axios';
 
 const makeRequest = async (
-    baseURL ,
-  apiEndPoint = { url: "", method: "" },
-  dynamicConfig = {}
+  baseURL,
+  apiEndPoint = { url: '', method: '' },
+  dynamicConfig = {},
 ) => {
   try {
     const requestDetails = {
