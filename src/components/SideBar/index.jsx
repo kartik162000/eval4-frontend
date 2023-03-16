@@ -16,7 +16,7 @@ function SideBar(props) {
     props.setWhichCollection(collectionType);
     props.handleCollection(true);
     props.handleBuilder(false);
-    makeRequest(BACKEND_URL, GET_COLLECTION_VALUES(1, collectionType), { headers: { authorization: `Bearer ${localStorage.getItem('accessToken')}}` } })
+    makeRequest(BACKEND_URL, GET_COLLECTION_VALUES(1, collectionType), { headers: { authorization: localStorage.getItem('accessToken') } })
       .then((res) => {
         console.log(res.data.allFields);
         props.setCollectFields(res.data.allFields);

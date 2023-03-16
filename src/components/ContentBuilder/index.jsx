@@ -22,7 +22,7 @@ function ContentBuilder() {
     axios.post('http://localhost:4000/api/content-type/save', {
       contentType: newContentType,
       userId: 1,
-      headers: { authorization: `Bearer ${localStorage.getItem('accessToken')}}` },
+      headers: { authorization: localStorage.getItem('accessToken') },
     }).then((res) => {
       console.log(res);
     }).catch((err) => {
@@ -37,7 +37,9 @@ function ContentBuilder() {
   };
 
   useEffect(() => {
-    axios.get('http://localhost:4000/api/content-type/all/1').then((res) => {
+    axios.get('http://localhost:4000/api/content-type/all/1', {
+      headers: { authorization: localStorage.getItem('accessToken') },
+    }).then((res) => {
       console.log(res.data.allContentTypes);
       setContentTypes(res.data.allContentTypes);
     }).catch((err) => {
@@ -46,7 +48,12 @@ function ContentBuilder() {
   }, []);
   const handleClicks = (contentType) => {
     setSelectedContentType(contentType);
-    axios.get(`http://localhost:4000/api/content-type/${contentType}/1`).then((res) => {
+    axios.get(
+      `http://localhost:4000/api/content-type/${contentType}/1`,
+      {
+        headers: { authorization: localStorage.getItem('accessToken') },
+      },
+    ).then((res) => {
       setContentStructure(res.data.contentStructure);
     }).catch((err) => {
       console.log(err);

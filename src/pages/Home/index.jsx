@@ -16,7 +16,11 @@ function Home() {
   const [dataHeader, setDataHeader] = useState([]);
 
   useEffect(() => {
-    makeRequest(BACKEND_URL, GET_COLLECTIONS(1), { headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` } })
+    makeRequest(BACKEND_URL, GET_COLLECTIONS(1), {
+      headers: {
+        authorization: localStorage.getItem('accessToken'),
+      },
+    })
       .then((res) => {
         setCollectionTypes(res.contentType);
       })
@@ -26,10 +30,16 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    axios.get(`http://localhost:4000/api/content-type/${whichCollection}/1`, { headers: { authorization: `Bearer ${localStorage.getItem('accessToken')}` } }).then((res) => {
-      console.log(res.data.contentStructure);
-      setDataHeader(res.data.contentStructure);
-    });
+    axios
+      .get(`http://localhost:4000/api/content-type/${whichCollection}/1`, {
+        headers: {
+          authorization: localStorage.getItem('accessToken'),
+        },
+      })
+      .then((res) => {
+        console.log(res.data.contentStructure);
+        setDataHeader(res.data.contentStructure);
+      });
   }, [whichCollection]);
 
   const renderPage = () => {
@@ -60,9 +70,7 @@ function Home() {
         setWhichCollection={setWhichCollection}
         data={collectionTypes}
       />
-      <div className="sideContent">
-        {renderPage()}
-      </div>
+      <div className="sideContent">{renderPage()}</div>
     </div>
   );
 }
