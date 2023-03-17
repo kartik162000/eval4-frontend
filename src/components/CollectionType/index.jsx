@@ -57,6 +57,7 @@ function CollectionType(props) {
         userId,
         Collection_Value: formValues,
         contentType: props.whichCollection,
+      }, {
         headers: {
           authorization: localStorage.getItem('accessToken'),
         },

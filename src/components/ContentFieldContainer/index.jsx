@@ -17,7 +17,7 @@ export default function ContentFieldContainer(props) {
     const obj = {};
     obj[name] = type;
     console.log(obj);
-    axios.patch(`http://localhost:4000/api/content-type/update/${props.selectedContentType}`, { contentStructure: obj, headers: { authorization: localStorage.getItem('accessToken') } }).then((res) => {
+    axios.patch(`http://localhost:4000/api/content-type/update/${props.selectedContentType}`, { contentStructure: obj }, { headers: { authorization: localStorage.getItem('accessToken') } }).then((res) => {
       console.log(res);
     }).catch((err) => {
       console.log(err);

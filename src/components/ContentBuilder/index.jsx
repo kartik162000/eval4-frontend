@@ -22,6 +22,7 @@ function ContentBuilder() {
     axios.post('http://localhost:4000/api/content-type/save', {
       contentType: newContentType,
       userId: 1,
+    }, {
       headers: { authorization: localStorage.getItem('accessToken') },
     }).then((res) => {
       console.log(res);
